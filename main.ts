@@ -1,7 +1,52 @@
-input.onButtonPressed(Button.A, function () {
-    music.setTempo(42)
-    yoruni4()
+function yoruni6 () {
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(880, music.beat(BeatFraction.Quarter))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(784, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(523, music.beat(BeatFraction.Quarter))
+    music.playTone(988, music.beat(BeatFraction.Eighth))
+    music.playTone(880, music.beat(BeatFraction.Quarter))
+    music.playTone(880, music.beat(BeatFraction.Quarter))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.rest(music.beat(BeatFraction.Eighth))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.rest(music.beat(BeatFraction.Eighth))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(784, music.beat(BeatFraction.Eighth))
+    music.playTone(740, music.beat(BeatFraction.Eighth))
+    music.rest(music.beat(BeatFraction.Eighth))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+}
+music.onEvent(MusicEvent.BackgroundMelodyNotePlayed, function () {
+    led.plotBarGraph(
+    2,
+    4
+    )
 })
+input.onButtonPressed(Button.A, function () {
+	
+})
+function yoruni () {
+    music.setVolume(47)
+    music.setBuiltInSpeakerEnabled(true)
+    music.setTempo(65)
+    yoruni1()
+    yoruni2()
+    yoruni3()
+    yoruni4()
+    yoruni5()
+    yoruni4()
+    yoruni6()
+}
 function yoruni4 () {
     music.playTone(587, music.beat(BeatFraction.Quarter))
     music.playTone(554, music.beat(BeatFraction.Quarter))
@@ -33,32 +78,10 @@ function yoruni4 () {
     music.playTone(740, music.beat(BeatFraction.Quarter))
     music.playTone(988, music.beat(BeatFraction.Quarter))
     music.playTone(880, music.beat(BeatFraction.Half))
-    music.playTone(740, music.beat(BeatFraction.Quarter))
-    music.playTone(880, music.beat(BeatFraction.Quarter))
-    music.playTone(988, music.beat(BeatFraction.Quarter))
-    music.playTone(784, music.beat(BeatFraction.Quarter))
-    music.playTone(740, music.beat(BeatFraction.Quarter))
-    music.playTone(659, music.beat(BeatFraction.Quarter))
-    music.playTone(587, music.beat(BeatFraction.Eighth))
-    music.playTone(659, music.beat(BeatFraction.Eighth))
-    music.playTone(988, music.beat(BeatFraction.Quarter))
-    music.playTone(494, music.beat(BeatFraction.Quarter))
-    music.rest(music.beat(BeatFraction.Eighth))
-    music.playTone(880, music.beat(BeatFraction.Quarter))
-    music.playTone(988, music.beat(BeatFraction.Eighth))
+    music.rest(music.beat(BeatFraction.Sixteenth))
 }
 input.onButtonPressed(Button.B, function () {
-    led.plotBarGraph(
-    2,
-    4
-    )
-    music.setBuiltInSpeakerEnabled(true)
-    music.setTempo(65)
-    yoruni1()
-    yoruni2()
-    yoruni3()
-    yoruni4()
-    yoruni4()
+    yoruni()
 })
 function yoruni1 () {
     music.playTone(370, music.beat(BeatFraction.Quarter))
@@ -169,6 +192,31 @@ function yoruni2 () {
     music.playTone(494, music.beat(BeatFraction.Half))
     music.rest(music.beat(BeatFraction.Whole))
 }
+function yoruni5 () {
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(880, music.beat(BeatFraction.Quarter))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(784, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Eighth))
+    music.playTone(659, music.beat(BeatFraction.Eighth))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(880, music.beat(BeatFraction.Half))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Half))
+    music.playTone(494, music.beat(BeatFraction.Quarter))
+    music.playTone(554, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(659, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(587, music.beat(BeatFraction.Quarter))
+    music.playTone(740, music.beat(BeatFraction.Quarter))
+    music.playTone(988, music.beat(BeatFraction.Quarter))
+    music.playTone(932, music.beat(BeatFraction.Quarter))
+}
 function yoruni3 () {
     music.playTone(440, music.beat(BeatFraction.Quarter))
     music.playTone(440, music.beat(BeatFraction.Quarter))
@@ -239,6 +287,3 @@ function yoruni3 () {
     music.playTone(740, music.beat(BeatFraction.Half))
     music.rest(music.beat(BeatFraction.Eighth))
 }
-basic.forever(function () {
-	
-})
