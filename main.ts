@@ -1,3 +1,9 @@
+music.onEvent(MusicEvent.MelodyStarted, function () {
+    led.plotBarGraph(
+    2,
+    4
+    )
+})
 function yoruni6 () {
     music.playTone(740, music.beat(BeatFraction.Quarter))
     music.playTone(880, music.beat(BeatFraction.Quarter))
@@ -26,19 +32,11 @@ function yoruni6 () {
     music.playTone(659, music.beat(BeatFraction.Quarter))
     music.playTone(587, music.beat(BeatFraction.Quarter))
 }
-music.onEvent(MusicEvent.BackgroundMelodyNotePlayed, function () {
-    led.plotBarGraph(
-    2,
-    4
-    )
-})
 input.onButtonPressed(Button.A, function () {
-	
+    music.setBuiltInSpeakerEnabled(false)
+    radio.setGroup(111)
 })
 function yoruni () {
-    music.setVolume(47)
-    music.setBuiltInSpeakerEnabled(true)
-    music.setTempo(65)
     yoruni1()
     yoruni2()
     yoruni3()
@@ -80,7 +78,11 @@ function yoruni4 () {
     music.playTone(880, music.beat(BeatFraction.Half))
     music.rest(music.beat(BeatFraction.Sixteenth))
 }
+input.onGesture(Gesture.Shake, function () {
+    yoruni()
+})
 input.onButtonPressed(Button.B, function () {
+    music.playMelody("- - - - - - - - ", 500)
     yoruni()
 })
 function yoruni1 () {
